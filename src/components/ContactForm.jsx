@@ -1,76 +1,80 @@
-
 import { motion } from 'framer-motion';
+
 
 const ContactForm = () => {
   return (
-    <motion.section
-      id="contact"
-      className="bg-black text-white p-8"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-    >
-      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-        <motion.div
-          className="md:w-1/2"
-          initial={{ x: '-100vw' }}
-          animate={{ x: 0 }}
-          transition={{ type: 'spring', stiffness: 50 }}
+    <section id="contact" className="bg-black text-white py-20">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
+        
+        {/* Send us a message section */}
+        <motion.div 
+          className="mb-12"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
         >
-          <h2 className="text-3xl font-bold">Get in touch</h2>
-          <p className="mt-2">Let&apos;s discuss your next project.</p>
-          <div className="mt-8 space-y-4">
-            <div className="flex items-center">
-              <svg className="w-6 h-6 text-teal-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 12A4 4 0 0112 8a4 4 0 100 8 4 4 0 004-4zm0 0v1a4 4 0 01-4 4 4 4 0 010-8 4 4 0 014 4z" />
-              </svg>
-              <span>Email: john@example.com</span>
+          <h2 className="text-3xl font-bold mb-4">Send us a message</h2>
+          <form className="space-y-4">
+            <div>
+              <label htmlFor="company-name" className="block text-sm">Company Name</label>
+              <input
+                type="text"
+                id="company-name"
+                className="w-full p-2 bg-gray-800 border border-gray-700 rounded"
+                placeholder="e.g. Google, Apple"
+              />
             </div>
-            <div className="flex items-center">
-              <svg className="w-6 h-6 text-teal-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8a1 1 0 011-1h16a1 1 0 011 1v8a1 1 0 01-1 1H4a1 1 0 01-1-1V8zm2-2h14a1 1 0 011 1v1H4V7a1 1 0 011-1z" />
-              </svg>
-              <span>Phone: +1 (555) 123-4567</span>
+            <div>
+              <label htmlFor="company-email" className="block text-sm">Company Email</label>
+              <input
+                type="email"
+                id="company-email"
+                className="w-full p-2 bg-gray-800 border border-gray-700 rounded"
+                placeholder="e.g. name@company.com"
+              />
             </div>
-            <div className="flex items-center">
-              <svg className="w-6 h-6 text-teal-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5.121 17.804A12 12 0 012.186 9.23M6 9a4 4 0 018 0m3 0a4 4 0 018 0m-6 10a4 4 0 01-8 0m-4 0a4 4 0 018 0m3-10a4 4 0 018 0m-2 8h2m-4 0h2m-6 0h2m-6 0h2m-4 0h2" />
-              </svg>
-              <span>Location: 123 Design Street, Creativetown, USA</span>
+            <div>
+              <label htmlFor="message" className="block text-sm">Message</label>
+              <textarea
+                id="message"
+                className="w-full p-2 bg-gray-800 border border-gray-700 rounded"
+                rows="4"
+                placeholder="Hi, we'd like to create some awesomeness with you..."
+              ></textarea>
             </div>
-          </div>
-        </motion.div>
-        <motion.div
-          className="md:w-1/2 mt-8 md:mt-0"
-          initial={{ x: '100vw' }}
-          animate={{ x: 0 }}
-          transition={{ type: 'spring', stiffness: 50 }}
-        >
-          <form className="bg-gray-800 p-6 rounded-lg shadow-md">
-            <div className="mb-4">
-              <label className="block text-gray-300">Name</label>
-              <input type="text" className="w-full p-2 mt-2 border border-gray-600 rounded bg-gray-900 text-white" placeholder="Your Name" />
+            <div>
+              <button
+                type="submit"
+                className="w-full p-2 bg-gray-700 border border-gray-600 rounded text-white hover:bg-gray-600"
+              >
+                Send Email
+              </button>
             </div>
-            <div className="mb-4">
-              <label className="block text-gray-300">Email</label>
-              <input type="email" className="w-full p-2 mt-2 border border-gray-600 rounded bg-gray-900 text-white" placeholder="yourname@example.com" />
-            </div>
-            <div className="mb-4">
-              <label className="block text-gray-300">Message</label>
-              <textarea className="w-full p-2 mt-2 border border-gray-600 rounded bg-gray-900 text-white" placeholder="Your message here..."></textarea>
-            </div>
-            <motion.button
-              type="submit"
-              className="bg-teal-500 text-white py-2 px-4 rounded"
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-            >
-              Submit
-            </motion.button>
           </form>
         </motion.div>
+        
+        {/* Contact Us section */}
+        <motion.div 
+          className="mb-12"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h2 className="text-3xl font-bold mb-4">Contact Us</h2>
+          <p className="text-sm mb-2">ADDRESS</p>
+          <p className="text-lg mb-4">The Office Group</p>
+          <p className="text-sm mb-2">91 Wimpole Street</p>
+          <p className="text-sm mb-2">Marylebone</p>
+          <p className="text-sm mb-2">London</p>
+          <p className="text-sm mb-2">W1G 0EF</p>
+          <p className="text-sm mb-8">United Kingdom</p>
+          <p className="text-sm mb-2">EMAIL</p>
+          <p className="text-lg mb-4"><a href="mailto:info@fillistudios.com" className="text-teal-500 hover:underline">info@fillistudios.com</a></p>
+          <p className="text-sm mb-2">CALL US</p>
+          <p className="text-lg"><a href="tel:+442078469316" className="text-teal-500 hover:underline">(+44) 020 7846 9316</a></p>
+        </motion.div>
       </div>
-    </motion.section>
+    </section>
   );
 };
 

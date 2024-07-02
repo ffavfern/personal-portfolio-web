@@ -64,9 +64,9 @@ const Footer = () => {
           >
             <h3 className="text-xl font-bold">CONTACT</h3>
             <ul className="mt-4 space-y-2">
-              <li>Email</li>
-              <li>Phone</li>
-              <li>LinkedIn</li>
+              <li>Email: email@example.com</li>
+              <li>Phone: +1 (555) 123-4567</li>
+              <li>Location: 123 Design Street, Creativetown, USA</li>
             </ul>
           </motion.div>
         </div>
