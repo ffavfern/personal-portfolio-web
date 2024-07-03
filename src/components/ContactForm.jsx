@@ -66,12 +66,12 @@ const ContactForm = () => {
           <p className="text-sm mb-2">91 Wimpole Street</p>
           <p className="text-sm mb-2">Marylebone</p>
           <p className="text-sm mb-2">London</p>
-          <p className="text-sm mb-2">W1G 0EF</p>
-          <p className="text-sm mb-8">United Kingdom</p>
+          <p className="text-sm mb-2">Chaing Mai</p>
+          <p className="text-sm mb-8">Thailand</p>
           <p className="text-sm mb-2">EMAIL</p>
-          <p className="text-lg mb-4"><a href="mailto:info@fillistudios.com" className="text-teal-500 hover:underline">info@fillistudios.com</a></p>
+          <p className="text-lg mb-4"><a href="mailto:Adirek.n2020@gmail.com" className="text-teal-500 hover:underline">Adirek.n2020@gmail.com</a></p>
           <p className="text-sm mb-2">CALL US</p>
-          <p className="text-lg"><a href="tel:+442078469316" className="text-teal-500 hover:underline">(+44) 020 7846 9316</a></p>
+          <p className="text-lg"><a href="tel:+66622941945" className="text-teal-500 hover:underline">(+66) 062 294 1945</a></p>
         </motion.div>
       </div>
     </section>

@@ -21,7 +21,7 @@ const Footer = () => {
           >
             <h2 className="text-3xl font-bold">Let&apos;s collaborate</h2>
             <p className="mt-2">
-              I&apos;m passionate about creating designs that not only look great but also function perfectly. Let&apos;s work together to bring your vision to life.
+              I&apos;m an expert in teaching Chinese in Thailand and have extensive experience as a teacher. Let&apos;s work together to enhance language skills and bring your vision to life through effective teaching methods.
             </p>
             <div className="mt-4 flex justify-center md:justify-start space-x-4">
               <a href="#" aria-label="Facebook" className="text-white hover:text-teal-500">
@@ -49,11 +49,10 @@ const Footer = () => {
           >
             <h3 className="text-xl font-bold">PROJECTS</h3>
             <ul className="mt-4 space-y-2">
-              <li>Tech Rebrand</li>
-              <li>Ad Campaign</li>
-              <li>App Design</li>
-              <li>Brand Guidelines</li>
-              <li>Social Media Content</li>
+              <li>Research and publication</li>
+              <li>Lecturers and experts</li>
+              <li>Competition</li>
+              <li>Teaching</li>
             </ul>
           </motion.div>
           <motion.div
@@ -64,9 +63,9 @@ const Footer = () => {
           >
             <h3 className="text-xl font-bold">CONTACT</h3>
             <ul className="mt-4 space-y-2">
-              <li>Email: email@example.com</li>
-              <li>Phone: +1 (555) 123-4567</li>
-              <li>Location: 123 Design Street, Creativetown, USA</li>
+              <li>Email: Adirek.n2020@gmail.com</li>
+              <li>Phone: +66 (062) 291-1945</li>
+              <li>Location: Chiang Mai,Thailand</li>
             </ul>
           </motion.div>
         </div>

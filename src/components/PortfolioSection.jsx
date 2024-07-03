@@ -4,38 +4,38 @@ import { motion, AnimatePresence } from 'framer-motion';
 const portfolioItems = [
   {
     _id: '1',
-    title: 'Project One',
-    description: 'Description for project one.',
+    title: 'ตรวจประเมินจัดตั้งองค์กรรับรองสมรรถนะบุคคลฯ',
+    description: "ตรวจประเมินจัดตั้งองค์กรรับรองสมรรถนะบุคคลฯ สถาบันคุณวุฒิวิชาชีพ องค์การมหาชน",
     date: '2023-06-01',
     type: 'Research and Publication',
-    image: '/path/to/image1.jpg',
+    image: 'https://static.wixstatic.com/media/1615f4_e5bcb70ed9ec447baf88c235cab042b8~mv2.png/v1/fill/w_312,h_205,al_c,q_80,usm_0.66_1.00_0.01/1615f4_e5bcb70ed9ec447baf88c235cab042b8~mv2.png',
     link: '#'
   },
   {
     _id: '2',
-    title: 'Project Two',
-    description: 'Description for project two.',
+    title: 'พัฒนาศักยภาพทางวิชาชีพครูไทย',
+    description: 'การบรรยาย "การพัฒนาศักยภาพครูไทย ที่สอนภาษาจีนในประเทศไทย"',
     date: '2023-05-15',
     type: 'Competition and Awards',
-    image: '/path/to/image2.jpg',
+    image: 'https://static.wixstatic.com/media/1615f4_2ebaf24a541d40bbbb55884ad1982b60~mv2.jpg/v1/fill/w_312,h_234,al_c,q_80,usm_0.66_1.00_0.01/1615f4_2ebaf24a541d40bbbb55884ad1982b60~mv2.jpg',
     link: '#'
   },
   {
     _id: '3',
-    title: 'Project Three',
-    description: 'Description for project three.',
+    title: 'การเสวนาแลกเปลี่ยนความรู้และประสบการณ์',
+    description: 'การเสวนาแลกเปลี่ยนความรู้และประสบการณ์การจัดการเรียนการสอนภาษาจีนสำหรับนักเรียนไทย',
     date: '2023-04-20',
     type: 'Speaker and Expert',
-    image: '/path/to/image3.jpg',
+    image: 'https://static.wixstatic.com/media/1615f4_8ea4677774fe483e9f3460d9e8a5a51d~mv2.jpg/v1/fill/w_312,h_234,al_c,q_80,usm_0.66_1.00_0.01/1615f4_8ea4677774fe483e9f3460d9e8a5a51d~mv2.jpg',
     link: '#'
   },
   {
     _id: '4',
-    title: 'Project Four',
-    description: 'Description for project four.',
+    title: 'การลงนามความร่วมมือทางวิชาการด้านภาษาและวัฒนธรรมจีน',
+    description: 'การลงนามความร่วมมือทางวิชาการด้านภาษาและวัฒนธรรมจีน ระหว่างสถานศึกษา องค์กรต่าง ๆ',
     date: '2023-03-10',
     type: 'Teaching and Learning',
-    image: '/path/to/image4.jpg',
+    image: 'https://static.wixstatic.com/media/1615f4_8ced037eb24b46aab1f303b2fa40c971~mv2.jpg/v1/fill/w_312,h_207,al_c,q_80,usm_0.66_1.00_0.01/1615f4_8ced037eb24b46aab1f303b2fa40c971~mv2.jpg',
     link: '#'
   },
   // Add more items as needed
@@ -62,15 +62,15 @@ const PortfolioSection = () => {
   return (
     <motion.section
       id="portfolio"
-      className="bg-white text-black p-8"
+      className="bg-white text-black py-20"
       initial={{ y: '100vh' }}
       animate={{ y: 0 }}
       transition={{ type: 'spring', stiffness: 50 }}
     >
-      <div className="container mx-auto">
+      <div className="container mx-auto justify-between">
         <h2 className="text-3xl font-bold text-center md:text-left">Portfolio Highlights</h2>
-        <div className="mt-8 flex justify-center items-center">
-          <div className="flex space-x-4">
+        <div className="mt-8 flex justify-between items-center">
+          <div className="flex space-x-4 justify-center">
             <AnimatePresence>
               {[...Array(3)].map((_, i) => {
                 const item = portfolioItems[(index + i) % length];
@@ -80,7 +80,7 @@ const PortfolioSection = () => {
                 return (
                   <motion.div
                     key={item._id}
-                    className="portfolio-item bg-white shadow-lg rounded-lg overflow-hidden"
+                    className="portfolio-item bg-white shadow-lg rounded-lg overflow-hidden w-96"
                     initial={{ opacity: 0, x: 100 }}
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: -100 }}
