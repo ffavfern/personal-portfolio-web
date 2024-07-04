@@ -67,40 +67,36 @@ const PortfolioSection = () => {
       animate={{ y: 0 }}
       transition={{ type: 'spring', stiffness: 50 }}
     >
-      <div className="container mx-auto justify-between">
+      <div className="container mx-auto px-4">
         <h2 className="text-3xl font-bold text-center md:text-left">Portfolio Highlights</h2>
-        <div className="mt-8 flex justify-between items-center">
-          <div className="flex space-x-4 justify-center">
-            <AnimatePresence>
-              {[...Array(3)].map((_, i) => {
-                const item = portfolioItems[(index + i) % length];
-                const isLeftMost = i === 0;
-                const isRightMost = i === 2;
+        <div className="mt-8 flex flex-col md:flex-row justify-center md:justify-between items-center space-y-8 md:space-y-0">
+          <AnimatePresence>
+            {[...Array(3)].map((_, i) => {
+              const item = portfolioItems[(index + i) % length];
 
-                return (
-                  <motion.div
-                    key={item._id}
-                    className="portfolio-item bg-white shadow-lg rounded-lg overflow-hidden w-96"
-                    initial={{ opacity: 0, x: 100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -100 }}
-                    transition={{ duration: 1 }}
-                    onMouseEnter={() => isLeftMost ? handleMouseEnter('left') : isRightMost ? handleMouseEnter('right') : null}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    <img src={item.image} alt={item.title} className="w-full h-64 object-cover" />
-                    <div className="p-4">
-                      <h3 className="mt-4 text-xl text-center md:text-left">{item.title}</h3>
-                      <p className="mt-2 text-center md:text-left">{item.description}</p>
-                      <p className="mt-2 text-gray-600 text-center md:text-left">{new Date(item.date).toLocaleDateString()}</p>
-                      <p className="mt-2 text-gray-600 text-center md:text-left">{item.type}</p>
-                      <a href={item.link} className="text-teal-500 hover:underline text-center md:text-left">View Project</a>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </AnimatePresence>
-          </div>
+              return (
+                <motion.div
+                  key={item._id}
+                  className="portfolio-item bg-white shadow-lg rounded-lg overflow-hidden w-full md:w-96"
+                  initial={{ opacity: 0, x: 100 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -100 }}
+                  transition={{ duration: 1 }}
+                  onMouseEnter={handleMouseEnter}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  <img src={item.image} alt={item.title} className="w-full h-64 object-cover" />
+                  <div className="p-4">
+                    <h3 className="mt-4 text-xl text-center md:text-left">{item.title}</h3>
+                    <p className="mt-2 text-center md:text-left">{item.description}</p>
+                    <p className="mt-2 text-gray-600 text-center md:text-left">{new Date(item.date).toLocaleDateString()}</p>
+                    <p className="mt-2 text-gray-600 text-center md:text-left">{item.type}</p>
+                    <a href={item.link} className="text-teal-500 hover:underline text-center md:text-left">View Project</a>
+                  </div>
+                </motion.div>
+              );
+            })}
+          </AnimatePresence>
         </div>
       </div>
     </motion.section>

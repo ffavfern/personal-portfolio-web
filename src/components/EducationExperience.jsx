@@ -117,7 +117,7 @@ const EducationExperience = () => {
           >
             <h2 className="text-blue-500 uppercase mb-2">Qualification</h2>
             <h3 className="text-3xl font-bold mb-4">My Education</h3>
-            <ul className="timeline timeline-vertical">
+            <ul className="timeline timeline-vertical ">
               {education.map((edu, index) => (
                 <li key={index}>
                   {index !== 0 && <hr />}
@@ -136,7 +136,7 @@ const EducationExperience = () => {
                       />
                     </svg>
                   </div>
-                  <div className="timeline-end timeline-box">
+                  <div className="timeline-end timeline-box bg-gray-200">
                     <div className="flex items-center mb-2">
                       <div className="w-8 h-8 mr-2">
                         <img
@@ -186,7 +186,7 @@ const EducationExperience = () => {
                       />
                     </svg>
                   </div>
-                  <div className="timeline-end timeline-box">
+                  <div className="timeline-end timeline-box bg-gray-200">
                     <div className="flex items-center mb-2">
                       <div className="w-8 h-8 mr-2">
                         <img
